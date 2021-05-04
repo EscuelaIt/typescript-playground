@@ -1,0 +1,27 @@
+{
+  "name": "typescript-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --ignore-path .gitignore --write ."
+  },
+  "keywords": [],
+  "author": "César Alberca <cesalberca@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "lint-staged": "10.5.4",
+    "prettier": "2.2.1",
+    "simple-git-hooks": "2.4.1",
+    "typescript": "4.2.4"
+  },
+  "lint-staged": {
+    "*.{ts,css,html,json,js,md,yaml}": [
+      "npm run format"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  }
+}
