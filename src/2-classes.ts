@@ -62,3 +62,17 @@ class ReadonlyClass {
     return this.name + this.foo
   }
 }
+
+abstract class AbstractClass {
+  abstract someMethod(): void
+
+  otherMethod() {
+    return 42
+  }
+}
+
+class BaseClass extends AbstractClass {
+  someMethod() {
+    return this.otherMethod() + 1
+  }
+}
