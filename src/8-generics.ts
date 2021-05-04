@@ -17,6 +17,7 @@ function identity<Type>(arg: Type): Type {
 identity<string>('foo') // string
 identity('foo') // string
 
+// @ts-expect-error
 function identityWithMoreGenerics<Type, Result>(arg: Type): Type {
   return arg
 }

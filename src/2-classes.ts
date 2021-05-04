@@ -26,14 +26,14 @@ dog.move()
 
 class ClassWithPrivateMethodsAndProperties {
   publicProperty = 42
-  private privateroperty = 42
+  private privateProperty = 42
 
   publicMethod() {
-    return 42
+    return this.privateMethod()
   }
 
   private privateMethod() {
-    return 42
+    return this.privateProperty
   }
 }
 
@@ -45,15 +45,17 @@ class ImprovedConstructorAssignment {
   }
 }
 
-interface Person {
-  name: string
-  age: number
-  job?: string
-  pet: string | undefined
-}
-
 class ReadonlyClass {
-  constructor(public readonly name: string, private readonly foo: number, private readonly person: Person) {}
+  constructor(
+    public readonly name: string,
+    private readonly foo: number,
+    private readonly person: {
+      name: string
+      age: number
+      job?: string
+      pet: string | undefined
+    }
+  ) {}
 
   bar(): string {
     this.person.age = 43

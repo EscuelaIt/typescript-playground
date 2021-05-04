@@ -12,7 +12,7 @@ const quxInferred = ['bar', 'baz', 'qux']
 // Null
 const n: null = null
 
-let a: string = 'bar'
+let a: string
 // @ts-expect-error
 a = null
 

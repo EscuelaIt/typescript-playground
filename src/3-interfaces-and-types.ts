@@ -5,6 +5,7 @@ interface Camera {
   image: Base64
 }
 
+// Interfaces
 interface Logger {
   log(message: string): void
 }
