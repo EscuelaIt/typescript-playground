@@ -15,4 +15,3 @@ Playground to learn TypeScript. You can [follow the slides here](https://docs.go
 9. Enums
 10. Type guards
 11. Utils
-

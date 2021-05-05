@@ -61,3 +61,32 @@ const people: {
 ]
 const ages = people.reduce((a, b) => a + b.age, 0)
 console.log(ages)
+
+type Cat = { name: string; favouriteToy: string; age: number }
+
+const cat: Cat = {
+  age: 1,
+  name: 'Tobby',
+  favouriteToy: 'Ball',
+}
+
+function getNameOfCat(cat: Cat): string {
+  return cat.name
+}
+
+getNameOfCat(cat)
+
+// Type alias
+type Url = string
+
+type User = {
+  id: string
+  name: string
+  photo: Url
+}
+
+interface User2 {
+  id: string
+  name: string
+  photo: Url
+}
