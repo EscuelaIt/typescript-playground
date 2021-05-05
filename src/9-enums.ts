@@ -16,3 +16,5 @@ enum Numbers {
   ONE = 1,
   TWO,
 }
+
+export {}

@@ -90,3 +90,5 @@ interface User2 {
   name: string
   photo: Url
 }
+
+export {}

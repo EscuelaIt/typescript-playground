@@ -71,3 +71,5 @@ loggingConstraintIdentity({ length: 2 })
 interface Foo<T> {
   bar(): T
 }
+
+export {}

@@ -43,3 +43,5 @@ function getStatus() {
 
   return status
 }
+
+export {}

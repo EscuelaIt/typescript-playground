@@ -14,3 +14,5 @@ function printId2(id: number | string) {
     console.log(id)
   }
 }
+
+export {}

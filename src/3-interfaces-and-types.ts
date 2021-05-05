@@ -21,3 +21,5 @@ class AlertLogger implements Logger {
     alert(message)
   }
 }
+
+export {}

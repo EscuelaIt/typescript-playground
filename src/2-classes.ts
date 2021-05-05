@@ -76,3 +76,5 @@ class BaseClass extends AbstractClass {
     return this.otherMethod() + 1
   }
 }
+
+export {}

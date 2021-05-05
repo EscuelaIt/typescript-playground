@@ -31,3 +31,5 @@ const basket: Basket = {
 }
 
 console.log(basket)
+
+export {}
