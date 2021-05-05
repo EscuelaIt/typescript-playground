@@ -76,19 +76,4 @@ function getNameOfCat(cat: Cat): string {
 
 getNameOfCat(cat)
 
-// Type alias
-type Url = string
-
-type User = {
-  id: string
-  name: string
-  photo: Url
-}
-
-interface User2 {
-  id: string
-  name: string
-  photo: Url
-}
-
 export {}
