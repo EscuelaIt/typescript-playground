@@ -8,10 +8,11 @@ Playground to learn TypeScript. You can [follow the slides here](https://docs.go
 2. Classes
 3. Interfaces and types
 4. Casting
-5. Union types
-6. Discriminating unions
-7. Intersection types
-8. Generics
-9. Enums
-10. Type guards
-11. Utils
+5. Literal types
+6. Union types
+7. Discriminating unions
+8. Intersection types
+9. Generics
+10. Enums
+11. Type guards
+12. Utils
