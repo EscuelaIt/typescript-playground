@@ -80,5 +80,4 @@ function padLeft(value: string, padding: string | number) {
   throw new Error(`Expected string or number, got '${padding}'.`)
 }
 
-
 export {}
