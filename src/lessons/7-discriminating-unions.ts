@@ -1,4 +1,5 @@
 interface NetworkLoadingState {
+  // Type literal
   state: 'loading'
 }
 
@@ -22,7 +23,7 @@ const networkState: NetworkState =
     : { state: 'failed', code: 404 }
 
 function getStatus() {
-  let status
+  let status: string
   switch (networkState.state) {
     case 'failed':
       // OK

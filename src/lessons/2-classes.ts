@@ -63,17 +63,36 @@ class ReadonlyClass {
   }
 }
 
-abstract class AbstractClass {
-  abstract someMethod(): void
+abstract class CostCalculator {
+  abstract billingCost(): number
 
-  otherMethod() {
-    return 42
+  calculateCost(baseCost: number) {
+    const total = baseCost + this.productionCost() + this.logisticsCost() + this.marketingCost() + this.billingCost()
+    return total
+  }
+
+  private productionCost() {
+    return 5
+  }
+
+  private logisticsCost() {
+    return 2
+  }
+
+  private marketingCost() {
+    return 1
   }
 }
 
-class BaseClass extends AbstractClass {
-  someMethod() {
-    return this.otherMethod() + 1
+class SpainCostCalculator extends CostCalculator {
+  billingCost(): number {
+    return 21
+  }
+}
+
+class FranceCostCalculator extends CostCalculator {
+  billingCost(): number {
+    return 21
   }
 }
 
