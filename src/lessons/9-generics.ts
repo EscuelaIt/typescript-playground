@@ -22,37 +22,41 @@ function identityWithMoreGenerics<Type, Result>(arg: Type): Type {
   return arg
 }
 
-identityWithMoreGenerics<string, number>('foo') // string
-identityWithMoreGenerics('foo') // string
+function identityWithDefaultValues<Type = unknown>(arg: Type): Type {
+  return arg
+}
 
-function loggingIdentity<T>(arg: T): T {
+identityWithDefaultValues('foo') // string
+
+function loggingIdentity<Type>(arg: Type): Type {
   // @ts-expect-error
   console.log(arg.length)
   return arg
 }
 
-function loggingIdentity2<T>(arg: T[]): T[] {
+function loggingIdentity2<Type>(arg: Type[]): Type[] {
   console.log(arg.length)
   return arg
 }
 
-class Generic<T> {
-  foo?: T
-  bar(x: T): T {
+class Generic<Type> {
+  foo?: Type
+  bar(x: Type): Type {
     return x
   }
 }
+
 const generic = new Generic<string>()
 generic.foo = ''
 generic.bar('baz')
 
-class DefaultGeneric<T = string> {
-  foo?: T
-  bar(x: T): T {
+class DefaultClassGeneric<Type = string> {
+  foo?: Type
+  bar(x: Type): Type {
     return x
   }
 }
-const generic2 = new DefaultGeneric()
+const generic2 = new DefaultClassGeneric()
 generic2.foo = ''
 generic2.bar('baz')
 
@@ -60,7 +64,7 @@ interface Lengthwise {
   length: number
 }
 
-function loggingConstraintIdentity<T extends Lengthwise>(arg: T): T {
+function loggingConstraintIdentity<Type extends Lengthwise>(arg: Type): Type {
   console.log(arg.length)
   return arg
 }

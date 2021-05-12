@@ -49,7 +49,7 @@ class Plane {
   }
 }
 
-function getVehicle() {
+function getVehicle(): Car | Plane {
   return Math.random() > 0.5 ? new Car() : new Plane()
 }
 
